@@ -71,3 +71,100 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+Agora sobre a instalação no restaurante! Aqui está o guia completo:
+
+🏪 Instalação no Restaurante (Setup Offline)
+1. Preparação do Notebook (Servidor Central)
+Pré-requisitos:
+
+Node.js (versão 18+)
+Git
+Passos:
+
+Exportar o projeto:
+
+Clique em "Export to GitHub" no Lovable
+Clone o repositório no notebook
+Instalar dependências:
+
+
+cd seu-projeto
+npm install
+Configurar para produção:
+
+
+npm run build
+npm start
+Obter o IP do notebook:
+
+Windows: ipconfig
+O IP será algo como 192.168.1.100
+2. Configuração da Rede Wi-Fi
+Cenário ideal:
+
+Todos os dispositivos conectados na mesma rede Wi-Fi
+Notebook rodando o servidor na porta 3000
+URL de acesso: http://192.168.1.100:3000
+3. Configuração dos Dispositivos
+📱 Smartphone (Garçom):
+
+Abrir navegador
+Acessar: http://IP-DO-NOTEBOOK:3000/garcom
+Adicionar à tela inicial (PWA)
+Usar em modo retrato
+📟 Tablet (Cozinha):
+
+Abrir navegador
+Acessar: http://IP-DO-NOTEBOOK:3000/cozinha
+Adicionar à tela inicial
+Usar em modo paisagem
+Recomendo usar modo tela cheia
+4. Script de Inicialização Automática
+Para o notebook iniciar o sistema automaticamente:
+
+Windows - Criar iniciar-sistema.bat:
+
+
+@echo off
+cd C:\caminho\para\seu\projeto
+npm start
+pause
+Linux/Mac - Criar script de inicialização:
+
+
+#!/bin/bash
+cd /caminho/para/seu/projeto
+npm start
+5. Configurações Recomendadas
+Notebook:
+
+Desabilitar suspensão automática
+Configurar inicialização automática do script
+Deixar sempre conectado na energia
+Dispositivos móveis:
+
+Desabilitar bloqueio de tela automático
+Configurar para não suspender o Wi-Fi
+Adicionar o app à tela inicial
+6. Teste do Sistema
+Teste básico:
+
+Notebook rodando o servidor
+Tablet acessa /cozinha
+Smartphone acessa /garcom
+Teste de comunicação:
+
+Garçom faz um pedido
+Verifica se aparece na cozinha instantaneamente
+Teste offline:
+
+Desconectar internet
+Sistema deve continuar funcionando localmente
+🚨 Troubleshooting Comum
+Não consegue acessar: Verificar firewall do Windows
+Pedidos não aparecem: Verificar se estão na mesma rede
+App lento: Considerar usar cabo ethernet no notebook
+Quer que eu detalhe algum passo específico ou tem alguma dúvida sobre a instalação?
+
+
