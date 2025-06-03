@@ -7,29 +7,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, Send, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { cardapio } from "@/data/cardapio"; // Importar o cardápio de um arquivo separado
+import { set } from "date-fns";
 
 interface MenuItem {
   id: string;
   nome: string;
   foto: string;
 }
-
 interface SelectedItem {
   id: string;
   nome: string;
   observacao?: string;
 }
-
-const cardapio: MenuItem[] = [
-  { id: "1", nome: "Executivo de Frango", foto: "🍗" },
-  { id: "2", nome: "Parmegiana", foto: "🍖" },
-  { id: "3", nome: "Lasanha", foto: "🍝" },
-  { id: "4", nome: "Salmão Grelhado", foto: "🐟" },
-  { id: "5", nome: "Risotto", foto: "🍚" },
-  { id: "6", nome: "Hambúrguer", foto: "🍔" },
-  { id: "7", nome: "Pizza Margherita", foto: "🍕" },
-  { id: "8", nome: "Salada Caesar", foto: "🥗" },
-];
 
 const cores = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98D8C8", "#F7DC6F"];
 
@@ -37,8 +27,11 @@ const Garcom = () => {
   const navigate = useNavigate();
   const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([]);
   const [observacao, setObservacao] = useState("");
+  const [mesa, setMesa] = useState("");
   const [selectedMenuItem, setSelectedMenuItem] = useState<MenuItem | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isMesaDialogOpen, setIsMesaDialogOpen] = useState(false);
+
 
   const adicionarItem = (item: MenuItem) => {
     setSelectedMenuItem(item);
@@ -57,6 +50,7 @@ const Garcom = () => {
       setIsDialogOpen(false);
       setSelectedMenuItem(null);
       setObservacao("");
+      setMesa(""); // Limpar campo de mesa
     }
   };
 
@@ -73,6 +67,7 @@ const Garcom = () => {
     const pedido = {
       id: Date.now().toString(),
       itens: selectedItems,
+      mesa: mesa.trim(),
       status: "ativo",
       cor: cores[Math.floor(Math.random() * cores.length)],
       timestamp: new Date().toISOString(),
@@ -125,6 +120,15 @@ const Garcom = () => {
           </div>
 
           <Button
+            onClick={() => setIsMesaDialogOpen(true)}
+            disabled={selectedItems.length === 0}
+            className="bg-green-600 hover:bg-green-700"
+          >
+            <Send className="w-4 h-4 mr-2" />
+            Enviar
+          </Button>
+
+          <Button
             onClick={enviarPedido}
             disabled={selectedItems.length === 0}
             className="bg-green-600 hover:bg-green-700"
@@ -132,6 +136,7 @@ const Garcom = () => {
             <Send className="w-4 h-4 mr-2" />
             Enviar
           </Button>
+
         </div>
       </div>
 
@@ -187,6 +192,45 @@ const Garcom = () => {
           </div>
         </DialogContent>
       </Dialog>
+      {/* Dialog para mesa */}
+      <Dialog open={isMesaDialogOpen} onOpenChange={setIsMesaDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Informe o número da mesa</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <label className="text-sm font-medium">Mesa</label>
+              <input
+                type="text"
+                value={mesa}
+                onChange={(e) => setMesa(e.target.value)}
+                placeholder="Ex: 12"
+                className="mt-1 block w-full border rounded-md p-2 text-sm"
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                onClick={() => setIsMesaDialogOpen(false)}
+                className="flex-1"
+              >
+                Cancelar
+              </Button>
+              <Button
+                onClick={() => {
+                  enviarPedido();
+                  setIsMesaDialogOpen(false);
+                }}
+                className="flex-1"
+              >
+                Confirmar
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
     </div>
   );
 };

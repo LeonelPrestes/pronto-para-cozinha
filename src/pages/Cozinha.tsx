@@ -15,9 +15,10 @@ interface ItemPedido {
 interface Pedido {
   id: string;
   itens: ItemPedido[];
+  mesa: string;
   status: "ativo" | "finalizado";
   cor: string;
-  timestamp: string;
+  timestamp: string;  
 }
 
 const Cozinha = () => {
@@ -91,6 +92,7 @@ const Cozinha = () => {
       pedidoId: pedido.id,
       itemIndex: index,
       cor: pedido.cor,
+      mesa: pedido.mesa, 
       finalizado: item.status === "finalizado"
     }))
   ).filter(item => !item.finalizado);
@@ -143,6 +145,9 @@ const Cozinha = () => {
                             {item.observacao}
                           </p>
                         )}
+                        <p className="text-xs text-white/80">
+                          Mesa: {item.mesa}
+                        </p>
                       </>
                     ) : (
                       <div className="text-center text-gray-400 text-xs">
@@ -183,6 +188,9 @@ const Cozinha = () => {
                           )}
                         </div>
                       ))}
+                      <p className="text-xs text-white/80 mt-1">
+                        Mesa: {pedido.mesa}
+                      </p>
                     </div>
                     <RotateCcw className="w-4 h-4 text-white" />
                   </div>
