@@ -128,15 +128,6 @@ const Garcom = () => {
             Enviar
           </Button>
 
-          <Button
-            onClick={enviarPedido}
-            disabled={selectedItems.length === 0}
-            className="bg-green-600 hover:bg-green-700"
-          >
-            <Send className="w-4 h-4 mr-2" />
-            Enviar
-          </Button>
-
         </div>
       </div>
 
