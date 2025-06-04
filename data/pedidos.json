@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1749006086710",
+    "itens": [
+      {
+        "id": "1-1749006081556",
+        "nome": "Executivo de Frango",
+        "observacao": "Sem Feijão"
+      }
+    ],
+    "mesa": "14",
+    "status": "ativo",
+    "cor": "#FF6B6B",
+    "timestamp": "2025-06-04T03:01:26.710Z"
+  },
+  {
+    "id": "1749021152924",
+    "itens": [
+      {
+        "id": "2-1749020929079",
+        "nome": "Parmegiana",
+        "observacao": "332"
+      }
+    ],
+    "mesa": "12",
+    "status": "ativo",
+    "cor": "#F7DC6F",
+    "timestamp": "2025-06-04T07:12:32.924Z"
+  },
+  {
+    "id": "1749022530593",
+    "itens": [
+      {
+        "id": "2-1749022525007",
+        "nome": "Parmegiana",
+        "observacao": "12"
+      }
+    ],
+    "mesa": "12",
+    "status": "ativo",
+    "cor": "#DDA0DD",
+    "timestamp": "2025-06-04T07:35:30.593Z"
+  },
+  {
+    "id": "1749022840135",
+    "itens": [
+      {
+        "id": "1-1749022834232",
+        "nome": "Executivo de Frango",
+        "observacao": "a"
+      }
+    ],
+    "mesa": "5",
+    "status": "ativo",
+    "cor": "#F7DC6F",
+    "timestamp": "2025-06-04T07:40:40.135Z"
+  }
+]

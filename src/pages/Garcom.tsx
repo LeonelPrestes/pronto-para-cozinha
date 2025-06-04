@@ -8,7 +8,6 @@ import { ArrowLeft, Send, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { cardapio } from "@/data/cardapio"; // Importar o cardápio de um arquivo separado
-import { set } from "date-fns";
 
 interface MenuItem {
   id: string;
@@ -58,10 +57,10 @@ const Garcom = () => {
     setSelectedItems(selectedItems.filter(item => item.id !== itemId));
   };
 
-  const enviarPedido = () => {
-    if (selectedItems.length === 0) {
-      toast.error("Selecione pelo menos um item");
-      return;
+const enviarPedido = async () => {
+  if (selectedItems.length === 0) {
+    toast.error("Selecione pelo menos um item");
+    return;
     }
 
     const pedido = {
@@ -73,17 +72,25 @@ const Garcom = () => {
       timestamp: new Date().toISOString(),
     };
 
-    // Salvar no localStorage
-    const pedidosExistentes = JSON.parse(localStorage.getItem("pedidos") || "[]");
-    pedidosExistentes.push(pedido);
-    localStorage.setItem("pedidos", JSON.stringify(pedidosExistentes));
+    try {
 
-    // Disparar evento customizado para comunicação em tempo real
-    window.dispatchEvent(new CustomEvent("novoPedido", { detail: pedido }));
+        const response = await fetch("http://localhost:8081/api/pedidos", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(pedido),
+    });
+
+    if (!response.ok) {
+      throw new Error('Erro ao enviar pedido');
+    }
 
     toast.success("Pedido enviado com sucesso!");
     setSelectedItems([]);
-  };
+  } catch (error) {
+    console.error(error);
+    toast.error("Falha ao enviar pedido");
+  }
+};
 
   return (
     <div className="min-h-screen bg-gray-50">

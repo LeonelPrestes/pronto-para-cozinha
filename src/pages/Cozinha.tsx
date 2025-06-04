@@ -25,74 +25,73 @@ const Cozinha = () => {
   const navigate = useNavigate();
   const [pedidos, setPedidos] = useState<Pedido[]>([]);
 
-  const carregarPedidos = () => {
-    const pedidosLocalStorage = JSON.parse(localStorage.getItem("pedidos") || "[]");
-    setPedidos(pedidosLocalStorage);
+  const carregarPedidos = async () => {
+    try {
+      const response = await fetch('http://192.168.2.115:8081/api/pedidos');
+      if (!response.ok) {
+        throw new Error('Erro ao carregar pedidos');
+      }
+      const data = await response.json();
+      setPedidos(data);
+    } catch (error) {
+      console.error('Erro:', error);
+      toast.error("Erro ao carregar pedidos");
+    }
   };
 
   useEffect(() => {
     carregarPedidos();
-
-    // Listener para novos pedidos
-    const handleNovoPedido = (event: CustomEvent) => {
+    const interval = setInterval(() => {
       carregarPedidos();
-      toast.success("Novo pedido recebido!");
-    };
-
-    window.addEventListener("novoPedido", handleNovoPedido as EventListener);
-    
-    return () => {
-      window.removeEventListener("novoPedido", handleNovoPedido as EventListener);
-    };
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
-  const finalizarItem = (pedidoId: string, itemIndex: number) => {
-    const pedidosAtualizados = pedidos.map(pedido => {
-      if (pedido.id === pedidoId) {
-        const novosItens = [...pedido.itens];
-        novosItens[itemIndex] = { ...novosItens[itemIndex], status: "finalizado" };
-        return { ...pedido, itens: novosItens };
-      }
-      return pedido;
-    });
-
-    // Se todos os itens do pedido foram finalizados, marcar o pedido como finalizado
-    const pedidoAtualizado = pedidosAtualizados.find(p => p.id === pedidoId);
-    if (pedidoAtualizado && pedidoAtualizado.itens.every(item => item.status === "finalizado")) {
-      pedidoAtualizado.status = "finalizado";
+  const finalizarItem = async (pedidoId: string, itemIndex: number) => {
+    try {
+      await fetch('http://192.168.2.115:8081/api/pedidos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pedidoId,
+          itemIndex,
+          acao: 'finalizar-item'
+        }),
+      });
+      carregarPedidos();
+    } catch (error) {
+      console.error('Erro ao finalizar item:', error);
+      toast.error("Erro ao finalizar item");
     }
-
-    setPedidos(pedidosAtualizados);
-    localStorage.setItem("pedidos", JSON.stringify(pedidosAtualizados));
   };
 
-  const restaurarPedido = (pedidoId: string) => {
-    const pedidosAtualizados = pedidos.map(pedido => {
-      if (pedido.id === pedidoId) {
-        return {
-          ...pedido,
-          status: "ativo" as const,
-          itens: pedido.itens.map(item => ({ ...item, status: undefined }))
-        };
-      }
-      return pedido;
-    });
-
-    setPedidos(pedidosAtualizados);
-    localStorage.setItem("pedidos", JSON.stringify(pedidosAtualizados));
+  const restaurarPedido = async (pedidoId: string) => {
+    try {
+      await fetch('http://192.168.2.115:8081/api/pedidos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pedidoId,
+          acao: 'restaurar'
+        }),
+      });
+      carregarPedidos();
+    } catch (error) {
+      console.error('Erro ao restaurar pedido:', error);
+      toast.error("Erro ao restaurar pedido");
+    }
   };
 
   const pedidosAtivos = pedidos.filter(p => p.status === "ativo");
   const pedidosFinalizados = pedidos.filter(p => p.status === "finalizado");
 
-  // Criar lista de itens ativos para a grade
   const itensAtivos = pedidosAtivos.flatMap(pedido =>
     pedido.itens.map((item, index) => ({
       ...item,
       pedidoId: pedido.id,
       itemIndex: index,
       cor: pedido.cor,
-      mesa: pedido.mesa, 
+      mesa: pedido.mesa,
       finalizado: item.status === "finalizado"
     }))
   ).filter(item => !item.finalizado);
@@ -113,7 +112,7 @@ const Cozinha = () => {
       </div>
 
       <div className="flex gap-4 h-[calc(100vh-120px)]">
-        {/* Área de Pedidos Ativos (75% da tela) */}
+        {/* Pedidos Ativos */}
         <div className="flex-1">
           <h2 className="text-xl font-semibold mb-4">Pedidos Ativos</h2>
           <div className="grid grid-cols-4 gap-3 h-full">
@@ -164,7 +163,7 @@ const Cozinha = () => {
           </p>
         </div>
 
-        {/* Área de Pedidos Finalizados (25% da tela) */}
+        {/* Pedidos Finalizados */}
         <div className="w-80">
           <h2 className="text-xl font-semibold mb-4">Finalizados</h2>
           <div className="space-y-2 overflow-y-auto h-full">
