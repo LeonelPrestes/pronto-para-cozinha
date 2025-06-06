@@ -158,9 +158,6 @@ const Cozinha = () => {
               );
             })}
           </div>
-          <p className="text-sm text-gray-500 mt-2">
-            Duplo clique para finalizar um item
-          </p>
         </div>
 
         {/* Pedidos Finalizados */}
@@ -197,9 +194,6 @@ const Cozinha = () => {
               </Card>
             ))}
           </div>
-          <p className="text-sm text-gray-500 mt-2">
-            Clique para restaurar pedido
-          </p>
         </div>
       </div>
     </div>

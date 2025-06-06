@@ -33,11 +33,12 @@
       {
         "id": "2-1749022525007",
         "nome": "Parmegiana",
-        "observacao": "12"
+        "observacao": "12",
+        "status": "finalizado"
       }
     ],
     "mesa": "12",
-    "status": "ativo",
+    "status": "finalizado",
     "cor": "#DDA0DD",
     "timestamp": "2025-06-04T07:35:30.593Z"
   },
@@ -54,5 +55,163 @@
     "status": "ativo",
     "cor": "#F7DC6F",
     "timestamp": "2025-06-04T07:40:40.135Z"
+  },
+  {
+    "id": "1749023207218",
+    "itens": [
+      {
+        "id": "1-1749023192109",
+        "nome": "Executivo de Frango"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#45B7D1",
+    "timestamp": "2025-06-04T07:46:47.218Z"
+  },
+  {
+    "id": "1749158371100",
+    "itens": [
+      {
+        "id": "2-1749158367762",
+        "nome": "Parmegiana"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#45B7D1",
+    "timestamp": "2025-06-05T21:19:31.100Z"
+  },
+  {
+    "id": "1749158753301",
+    "itens": [
+      {
+        "id": "1-1749158751049",
+        "nome": "Executivo de Frango"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#98D8C8",
+    "timestamp": "2025-06-05T21:25:53.301Z"
+  },
+  {
+    "id": "1749160298377",
+    "itens": [
+      {
+        "id": "1-1749160294961",
+        "nome": "Executivo de Frango",
+        "observacao": "1414"
+      }
+    ],
+    "mesa": "10",
+    "status": "ativo",
+    "cor": "#98D8C8",
+    "timestamp": "2025-06-05T21:51:38.377Z"
+  },
+  {
+    "id": "1749160326655",
+    "itens": [
+      {
+        "id": "2-1749160322127",
+        "nome": "Parmegiana",
+        "observacao": "asd"
+      }
+    ],
+    "mesa": "144",
+    "status": "ativo",
+    "cor": "#96CEB4",
+    "timestamp": "2025-06-05T21:52:06.655Z"
+  },
+  {
+    "id": "1749160720419",
+    "itens": [
+      {
+        "id": "2-1749160718804",
+        "nome": "Parmegiana"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#45B7D1",
+    "timestamp": "2025-06-05T21:58:40.419Z"
+  },
+  {
+    "id": "1749160800037",
+    "itens": [
+      {
+        "id": "2-1749160798164",
+        "nome": "Parmegiana"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#F7DC6F",
+    "timestamp": "2025-06-05T22:00:00.037Z"
+  },
+  {
+    "id": "1749160802321",
+    "itens": [
+      {
+        "id": "4-1749160801089",
+        "nome": "Salmão Grelhado"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#98D8C8",
+    "timestamp": "2025-06-05T22:00:02.321Z"
+  },
+  {
+    "id": "1749160804733",
+    "itens": [
+      {
+        "id": "3-1749160803457",
+        "nome": "Lasanha"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#45B7D1",
+    "timestamp": "2025-06-05T22:00:04.733Z"
+  },
+  {
+    "id": "1749160807197",
+    "itens": [
+      {
+        "id": "2-1749160805869",
+        "nome": "Parmegiana"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#4ECDC4",
+    "timestamp": "2025-06-05T22:00:07.197Z"
+  },
+  {
+    "id": "1749160810418",
+    "itens": [
+      {
+        "id": "2-1749160809139",
+        "nome": "Parmegiana"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#4ECDC4",
+    "timestamp": "2025-06-05T22:00:10.418Z"
+  },
+  {
+    "id": "1749161156875",
+    "itens": [
+      {
+        "id": "1-1749161151104",
+        "nome": "Executivo de Frango"
+      }
+    ],
+    "mesa": "",
+    "status": "ativo",
+    "cor": "#45B7D1",
+    "timestamp": "2025-06-05T22:05:56.875Z"
   }
 ]

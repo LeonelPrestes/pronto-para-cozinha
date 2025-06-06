@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Send, X } from "lucide-react";
+import { ArrowLeft, Calendar, Send, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { cardapio } from "@/data/cardapio"; // Importar o cardápio de um arquivo separado
@@ -137,7 +137,7 @@ const enviarPedido = async () => {
 
         </div>
       </div>
-
+              
       {/* Conteúdo principal */}
       <div className="pt-24 p-4">
         <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
@@ -148,7 +148,7 @@ const enviarPedido = async () => {
               onClick={() => adicionarItem(item)}
             >
               <CardContent className="p-4 flex flex-col items-center justify-center h-full">
-                <div className="text-4xl mb-2">{item.foto}</div>
+                <div className="text-4xl mb-2"><img src={item.foto} alt="" className="w-30 h-30 object-cover rounded"></img></div>
                 <h3 className="text-sm font-medium text-center">{item.nome}</h3>
               </CardContent>
             </Card>
@@ -228,7 +228,6 @@ const enviarPedido = async () => {
           </div>
         </DialogContent>
       </Dialog>
-
     </div>
   );
 };
