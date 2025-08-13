@@ -1,217 +1,98 @@
 [
   {
-    "id": "1749006086710",
+    "id": "1755089872331",
     "itens": [
       {
-        "id": "1-1749006081556",
-        "nome": "Executivo de Frango",
-        "observacao": "Sem Feijão"
-      }
-    ],
-    "mesa": "14",
-    "status": "ativo",
-    "cor": "#FF6B6B",
-    "timestamp": "2025-06-04T03:01:26.710Z"
-  },
-  {
-    "id": "1749021152924",
-    "itens": [
-      {
-        "id": "2-1749020929079",
-        "nome": "Parmegiana",
-        "observacao": "332"
+        "id": "1-1755089868859",
+        "nome": "Prato do Dia"
       }
     ],
     "mesa": "12",
     "status": "ativo",
-    "cor": "#F7DC6F",
-    "timestamp": "2025-06-04T07:12:32.924Z"
+    "cor": "#45B7D1",
+    "timestamp": "2025-08-13T12:57:52.331Z"
   },
   {
-    "id": "1749022530593",
+    "id": "1755089883205",
     "itens": [
       {
-        "id": "2-1749022525007",
-        "nome": "Parmegiana",
-        "observacao": "12",
+        "id": "3-1755089880843",
+        "nome": "Executivo de Frango",
+        "observacao": "Ao ponto",
         "status": "finalizado"
       }
     ],
-    "mesa": "12",
+    "mesa": "",
     "status": "finalizado",
     "cor": "#DDA0DD",
-    "timestamp": "2025-06-04T07:35:30.593Z"
+    "timestamp": "2025-08-13T12:58:03.205Z"
   },
   {
-    "id": "1749022840135",
+    "id": "1755089955685",
     "itens": [
       {
-        "id": "1-1749022834232",
-        "nome": "Executivo de Frango",
-        "observacao": "a"
+        "id": "4-1755089950815",
+        "nome": "Executivo de Porco",
+        "status": "finalizado"
+      }
+    ],
+    "mesa": "Viagem",
+    "status": "finalizado",
+    "cor": "#4ECDC4",
+    "timestamp": "2025-08-13T12:59:15.685Z"
+  },
+  {
+    "id": "1755089975903",
+    "itens": [
+      {
+        "id": "5-1755089971113",
+        "nome": "Macarrão",
+        "observacao": "Pouco molho"
+      }
+    ],
+    "mesa": "15",
+    "status": "ativo",
+    "cor": "#F7DC6F",
+    "timestamp": "2025-08-13T12:59:35.903Z"
+  },
+  {
+    "id": "1755089990263",
+    "itens": [
+      {
+        "id": "6-1755089986637",
+        "nome": "Item 6"
       }
     ],
     "mesa": "5",
     "status": "ativo",
-    "cor": "#F7DC6F",
-    "timestamp": "2025-06-04T07:40:40.135Z"
-  },
-  {
-    "id": "1749023207218",
-    "itens": [
-      {
-        "id": "1-1749023192109",
-        "nome": "Executivo de Frango"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#45B7D1",
-    "timestamp": "2025-06-04T07:46:47.218Z"
-  },
-  {
-    "id": "1749158371100",
-    "itens": [
-      {
-        "id": "2-1749158367762",
-        "nome": "Parmegiana"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#45B7D1",
-    "timestamp": "2025-06-05T21:19:31.100Z"
-  },
-  {
-    "id": "1749158753301",
-    "itens": [
-      {
-        "id": "1-1749158751049",
-        "nome": "Executivo de Frango"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#98D8C8",
-    "timestamp": "2025-06-05T21:25:53.301Z"
-  },
-  {
-    "id": "1749160298377",
-    "itens": [
-      {
-        "id": "1-1749160294961",
-        "nome": "Executivo de Frango",
-        "observacao": "1414"
-      }
-    ],
-    "mesa": "10",
-    "status": "ativo",
-    "cor": "#98D8C8",
-    "timestamp": "2025-06-05T21:51:38.377Z"
-  },
-  {
-    "id": "1749160326655",
-    "itens": [
-      {
-        "id": "2-1749160322127",
-        "nome": "Parmegiana",
-        "observacao": "asd"
-      }
-    ],
-    "mesa": "144",
-    "status": "ativo",
-    "cor": "#96CEB4",
-    "timestamp": "2025-06-05T21:52:06.655Z"
-  },
-  {
-    "id": "1749160720419",
-    "itens": [
-      {
-        "id": "2-1749160718804",
-        "nome": "Parmegiana"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#45B7D1",
-    "timestamp": "2025-06-05T21:58:40.419Z"
-  },
-  {
-    "id": "1749160800037",
-    "itens": [
-      {
-        "id": "2-1749160798164",
-        "nome": "Parmegiana"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#F7DC6F",
-    "timestamp": "2025-06-05T22:00:00.037Z"
-  },
-  {
-    "id": "1749160802321",
-    "itens": [
-      {
-        "id": "4-1749160801089",
-        "nome": "Salmão Grelhado"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#98D8C8",
-    "timestamp": "2025-06-05T22:00:02.321Z"
-  },
-  {
-    "id": "1749160804733",
-    "itens": [
-      {
-        "id": "3-1749160803457",
-        "nome": "Lasanha"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
-    "cor": "#45B7D1",
-    "timestamp": "2025-06-05T22:00:04.733Z"
-  },
-  {
-    "id": "1749160807197",
-    "itens": [
-      {
-        "id": "2-1749160805869",
-        "nome": "Parmegiana"
-      }
-    ],
-    "mesa": "",
-    "status": "ativo",
     "cor": "#4ECDC4",
-    "timestamp": "2025-06-05T22:00:07.197Z"
+    "timestamp": "2025-08-13T12:59:50.263Z"
   },
   {
-    "id": "1749160810418",
+    "id": "1755090001001",
     "itens": [
       {
-        "id": "2-1749160809139",
-        "nome": "Parmegiana"
+        "id": "4-1755089995503",
+        "nome": "Executivo de Porco"
       }
     ],
-    "mesa": "",
+    "mesa": "Sr. Carlos.",
     "status": "ativo",
-    "cor": "#4ECDC4",
-    "timestamp": "2025-06-05T22:00:10.418Z"
+    "cor": "#FF6B6B",
+    "timestamp": "2025-08-13T13:00:01.001Z"
   },
   {
-    "id": "1749161156875",
+    "id": "1755090567388",
     "itens": [
       {
-        "id": "1-1749161151104",
-        "nome": "Executivo de Frango"
+        "id": "2-1755090529351",
+        "nome": "Executivo de Boi",
+        "observacao": "Carne ao ponto.\nSem cebola."
       }
     ],
-    "mesa": "",
+    "mesa": "1",
     "status": "ativo",
-    "cor": "#45B7D1",
-    "timestamp": "2025-06-05T22:05:56.875Z"
+    "cor": "#98D8C8",
+    "timestamp": "2025-08-13T13:09:27.388Z"
   }
 ]

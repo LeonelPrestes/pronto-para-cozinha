@@ -21,11 +21,15 @@ O projeto "Pronto para Cozinha" é uma solução web desenvolvida para otimizar 
 - **Cardápio Interativo:** Escolha de itens do cardápio com a possibilidade de adicionar observações personalizadas para cada item.
 - **Envio Direto para a Cozinha:** Pedidos são enviados instantaneamente para a tela da cozinha.
 
+![Descrição do GIF](./public/Gravando%202025-08-13%20095326.gif)
+
 **Para a Cozinha:**
 
 - **Visualização em Tablet:** Pedidos são exibidos em tempo real na tela de um tablet.
 - **Gerenciamento Intuitivo:** Com um único toque, o pedido é movido da lista de "pendentes" para uma lista lateral de "prontos".
 - **Recuperação de Pedidos:** Caso necessário, pedidos marcados como "prontos" podem ser facilmente retornados à tela principal de "pendentes" com um clique duplo.
+
+![Descrição do GIF](./public/Gravando%202025-08-13%20100952.gif)
 
 Nosso objetivo é agilizar o processo de atendimento, reduzir erros e melhorar a comunicação entre a equipe do restaurante, resultando em uma experiência mais fluida para clientes e funcionários.
 
