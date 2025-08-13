@@ -1,6 +1,6 @@
 # 🚀 Pronto para Cozinha
 
-Um aplicativo web para gerenciar receitas e listas de compras, tornando a culinária mais fácil e organizada.
+Um aplicativo web para gerenciar pedidos para a cozinha de restaurantes, tornando o fluxo de pedidos mais fácil e organizado.
 
 ## 📚 Índice
 - [Sobre](#sobre)
@@ -12,13 +12,22 @@ Um aplicativo web para gerenciar receitas e listas de compras, tornando a culin�
 
 ## Sobre
 
-O projeto "Pronto para Cozinha" visa simplificar o processo de planejamento de refeições e gerenciamento de ingredientes. Com ele, você pode:
+O projeto "Pronto para Cozinha" é uma solução web desenvolvida para otimizar o fluxo de pedidos em cozinhas de restaurantes. Ele conecta garçons e a equipe da cozinha de forma eficiente, garantindo agilidade e organização no atendimento.
 
-- Criar e organizar suas receitas favoritas.
-- Gerar listas de compras automaticamente com base nas receitas selecionadas.
-- Acompanhar os ingredientes disponíveis em sua despensa.
+**Para Garçons:**
 
-Nosso objetivo é reduzir o desperdício de alimentos e otimizar o tempo gasto na cozinha, proporcionando uma experiência culinária mais eficiente e prazerosa.
+- **Pedidos via Celular:** O garçom pode registrar pedidos diretamente de um celular.
+- **Seleção de Mesa/Viagem:** Opção de associar o pedido a uma mesa específica ou marcá-lo para viagem.
+- **Cardápio Interativo:** Escolha de itens do cardápio com a possibilidade de adicionar observações personalizadas para cada item.
+- **Envio Direto para a Cozinha:** Pedidos são enviados instantaneamente para a tela da cozinha.
+
+**Para a Cozinha:**
+
+- **Visualização em Tablet:** Pedidos são exibidos em tempo real na tela de um tablet.
+- **Gerenciamento Intuitivo:** Com um único toque, o pedido é movido da lista de "pendentes" para uma lista lateral de "prontos".
+- **Recuperação de Pedidos:** Caso necessário, pedidos marcados como "prontos" podem ser facilmente retornados à tela principal de "pendentes" com um clique duplo.
+
+Nosso objetivo é agilizar o processo de atendimento, reduzir erros e melhorar a comunicação entre a equipe do restaurante, resultando em uma experiência mais fluida para clientes e funcionários.
 
 ## Instalação
 
