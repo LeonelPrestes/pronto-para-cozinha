@@ -96,6 +96,8 @@ Contribuições são bem-vindas! Para contribuir com o projeto, siga estas etapa
 
 Por favor, certifique-se de que seu código siga as diretrizes de estilo do projeto e que todos os testes passem.
 
+![Harsh's github stats](https://github-readme-stats.vercel.app/api?username=leonelprestes&hide=["issues"]&show_icons=true)
+
 ## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
